@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
 import Repositorio from './pages/Repositorio';
+import NotFound from './pages/NotFound';
 
 export default function Rotas() {
   return (
@@ -14,6 +15,7 @@ export default function Rotas() {
           path="/repositorio/:repositorio"
           element={<Repositorio />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
